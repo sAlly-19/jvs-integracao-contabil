@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://cdn.jsdelivr.net/npm/flowbite-icons@1.2.0/dist/flowbite-icons.min.css");
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
