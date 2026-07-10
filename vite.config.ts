@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/", // <--- Garante que os caminhos comecem na raiz na Vercel
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -16,7 +17,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        // Mudamos para incluir a barra inicial, garantindo caminho absoluto no build
         assetFileNames: 'assets/[name].[hash][extname]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       }
     },
     commonjsOptions: {

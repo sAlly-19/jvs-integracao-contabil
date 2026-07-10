@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "@flaticon/flaticon-uicons/css/regular/rounded.css";
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
