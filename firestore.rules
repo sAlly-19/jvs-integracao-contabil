@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    match /companies/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /accountPlans/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /bankAccounts/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /defaultHistoryConfigs/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /importProgress/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /integrationRules/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /layoutSelections/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /notifications/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /processedBatches/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /sheetConfigs/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /statementLayouts/{documentId} {
+      allow read, write: if signedIn();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

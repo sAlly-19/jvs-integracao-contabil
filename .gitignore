@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+build/
+
+# production
+dist/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env
+.env
+.env*
+!.env.example
+
+# local files
+*.local
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# cache
+.eslintcache
+*.tsbuildinfo
+
+# archives and temp folders
+*.zip
+*.plans/
+*.vscode/
+_codex_layouts/

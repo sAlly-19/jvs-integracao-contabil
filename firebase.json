@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-jvsintegracaocon-8a9396ed-d888-44a9-9726-a84cdac26cd3",
+      "rules": "firestore.rules"
+    }
+  ]
+}
